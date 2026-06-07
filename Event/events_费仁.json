@@ -1,0 +1,87 @@
+{
+  "version": "1.0.0",
+  "events": [
+    {
+      "id": "AP08E001",
+      "type": "personal",
+      "title": "遗迹传闻",
+      "participants": ["P08"],
+      "priority": 10,
+      "once": true,
+      "trigger": {
+        "requirements": [],
+        "conditions": []
+      },
+      "outcomes": [
+        {
+          "id": "AP08E001O001",
+          "priority": 100,
+          "conditions": [],
+          "text": "城南遗迹破土而出的消息传遍了落仙城。费仁在破屋里坐了整整一夜——三十七岁了，四灵根，无财无势。如果不去搏一把，这辈子最好的结局就是在南坊当一辈子杂役。第二天一早，他把床底破布袋里三十年攒下的灵石全部倒出来数了一遍，攥紧布袋走进了南坊。",
+          "next": [
+            { "target": "P08", "nextId": "AP08E002" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AP08E002",
+      "type": "personal",
+      "title": "倾囊购置",
+      "participants": ["P08"],
+      "priority": 10,
+      "once": true,
+      "trigger": {
+        "requirements": [],
+        "conditions": []
+      },
+      "outcomes": [
+        {
+          "id": "AP08E002O001",
+          "priority": 100,
+          "conditions": [],
+          "text": "费仁在铺子里站了很久，反复拿起又放下，最后把布袋里所有灵石倒在了柜台上。他买走了自己能买得起的几件装备——不算好，但对一个练气散修来说，已经是倾尽所有了。走出铺子时，他摸了摸腰间新挂的法宝，腰杆比来的时候直了一些。",
+          "next": [
+            { "target": "P08", "nextId": "AP08E003" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AP08E003",
+      "type": "personal",
+      "title": "遗迹探索",
+      "participants": ["P08"],
+      "priority": 10,
+      "once": true,
+      "trigger": {
+        "requirements": [],
+        "conditions": []
+      },
+      "outcomes": [
+        {
+          "id": "AP08E003O001",
+          "priority": 100,
+          "conditions": [
+            { "scope": "npc", "target": "P08", "attr": "attack", "op": ">=", "value": 8 },
+            { "scope": "npc", "target": "P08", "attr": "defense", "op": ">=", "value": 6 },
+            { "scope": "npc", "target": "P08", "attr": "speed", "op": ">=", "value": 8 }
+          ],
+          "text": "铺子的门被推开了，但不是平时那种推法——门板被什么东西从下方顶了一下，然后才慢慢滑开。费仁是爬着进来的。他的两条腿从膝盖以下都没了，用破布胡乱包着，在地上拖出两道暗红色的印子。但他把一块灰扑扑的金属碎片叼在嘴里，一路从遗迹爬回了南坊。他把碎片吐在柜台上，仰头看着掌柜，咧嘴笑了一下——那表情说不上是哭还是笑。'值钱不？'没人知道，这块不起眼的碎片，是落仙城地底封印的第一块钥匙。",
+          "next": [
+            { "target": "P08", "nextId": "EVENT_INACTIVE" }
+          ]
+        },
+        {
+          "id": "AP08E003O002",
+          "priority": 1,
+          "conditions": [],
+          "text": "几天后，南坊茶馆外那面写满失踪散修的旧木板上，多了一个新的名字——费仁。茶馆老吴用炭笔歪歪扭扭地写上去的。又过了几天，一个不认识的散修走进铺子，把一块灰扑扑的金属碎片放在柜台上。'这是我在遗迹里从一个人旁边捡的……那是个穷散修，袖口都磨毛了。'费仁没有回来，但他的碎片回来了。",
+          "next": [
+            { "target": "P08", "nextId": "EVENT_INACTIVE" }
+          ]
+        }
+      ]
+    }
+  ]
+}
